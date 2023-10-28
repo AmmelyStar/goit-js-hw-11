@@ -18,7 +18,7 @@ export async function fetchData(searchQuery) {
     return resp.data;
     
   } catch (error) {
-    Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
+    Notiflix.Notify.failure('Sorry error');
   }
 }
 
