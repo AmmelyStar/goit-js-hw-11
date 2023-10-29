@@ -44,3 +44,41 @@
 .info{
     padding: 30px;
 }
+
+
+.load-more{
+  display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 25px;
+	margin: 50px 500px;
+	outline: none;
+	border: 1px solid #f4f6f8;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #313272;
+	background-color: #87b6f3;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+  
+
+}
+
+.load-more:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+
+.load-more:hover{
+  transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+
+}

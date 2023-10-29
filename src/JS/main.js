@@ -139,3 +139,18 @@ function markup(cards) {
 }
 
 const lightbox = new SimpleLightbox('.gallery a');
+
+
+
+
+// function handleScroll() {
+//     const windowHeight = window.innerHeight;
+//     const documentHeight = document.documentElement.scrollHeight;
+//     const scrollPosition = window.scrollY;
+ 
+//     if (documentHeight - (windowHeight + scrollPosition) ) {
+//         loadMore();
+//     }
+// }
+ 
+// window.addEventListener('scroll', handleScroll);
