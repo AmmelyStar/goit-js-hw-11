@@ -75,10 +75,12 @@
 .load-more:focus-visible {
 	border: 1px solid #4c51f9;
 	outline: none;
+  color: #4b4dd6;
 }
 
 .load-more:hover{
   transition: all 0.2s;
-	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+	box-shadow: 0 7px 14px rgba(101, 209, 228, 0.1), 0 3px 6px rgb(0 0 0 / 8%);
+  color: #5558e0;
 
 }
