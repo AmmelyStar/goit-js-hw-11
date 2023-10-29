@@ -26,7 +26,22 @@ async function loadMore() {
      cardDiv.insertAdjacentHTML('beforeend', createMarkup);
     lightbox.refresh();
     console.log(cards.length);
-  console.log(data.totalHits);
+    console.log(data.totalHits);
+    
+    if (page * 40 >= data.totalHits) {
+       
+        Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+        btn.style.visibility = 'hidden';
+    }
+
+    const { height: cardHeight } = document
+  .querySelector(".gallery")
+  .firstElementChild.getBoundingClientRect();
+
+window.scrollBy({
+  top: cardHeight * 2,
+  behavior: "smooth",
+});
     
 }
 
@@ -46,9 +61,9 @@ async function searchPhoto(event) {
     const cardData = await fetchData(searchQuery, page);
     console.log(cardData.hits.length);
     console.log(cardData.totalHits);
-    console.log(page);
-    if (cardData.totalHits > 0) {
-        Notiflix.Notify.success(`Hooray! We found ${cardData.totalHits} images.`);
+    
+    if (cardData.total > 0) {
+        Notiflix.Notify.success(`Hooray! We found ${cardData.total} images.`);
         
     }
 
@@ -62,13 +77,14 @@ async function searchPhoto(event) {
     
 
     
-    if (cards.length > 0) {
-        cardDiv.insertAdjacentHTML('beforeend', createMarkup);
-     lightbox.refresh();
+    if (!cards.length) {
+        Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.'); 
         
     } else {
-        Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
+        cardDiv.insertAdjacentHTML('beforeend', createMarkup);
+     lightbox.refresh();
     }
+    
     
     
 }
