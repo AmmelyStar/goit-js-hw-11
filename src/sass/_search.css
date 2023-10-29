@@ -1,18 +1,12 @@
-
-.search-form{
-    display: flex;
-    justify-content: center;
-    right: 50px;
-    left: 30px;
-    padding: 50px;
-    background-color: rgb(219, 201, 236);
-    
+.search-form {
+  display: flex;
+  justify-content: center;
+  right: 50px;
+  left: 30px;
+  padding: 50px;
+  background-color: #dbc9ec;
 }
 
-
-// .gallery{
-//     margin-top: 100px;
-// }
 .gallery {
   margin: 0 auto;
   flex-wrap: wrap;
@@ -27,11 +21,10 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(246, 246, 246, 0.983);
+}
 
-  &:hover,
-  &:focus {
-    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-  }
+.photo-card:hover, .photo-card:focus {
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
 }
 
 .photo-img {
@@ -41,6 +34,6 @@
   overflow: hidden;
 }
 
-.info{
-    padding: 30px;
+.info {
+  padding: 30px;
 }
